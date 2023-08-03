@@ -13,7 +13,7 @@ model = torch.hub.load('ultralytics/yolov5', 'custom', path='bestcatanddogbreed.
 #model.cuda()  # GPU
 #torch.cuda.device(7)
 #device=torch.device(7)
-model.to("cpu")  # i.e. device=torch.device(0)
+model.to("cuda")  # i.e. device=torch.device(0)
 vid = cv2.VideoCapture("rtsp://admin:Otmadmin1234@10.10.9.115:554/cam/realmonitor?channel=1&subtype=0")
 vid.set(cv2.CAP_PROP_BUFFERSIZE, 0)
 
