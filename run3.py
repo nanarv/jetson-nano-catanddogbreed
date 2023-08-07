@@ -38,7 +38,7 @@ totalfps=0
 while(True):
     ret, frame = vid.read()
     
-    frame2= frame[...,::-1] # convert OpenCV's default BGR format to RGB for the model input's veracity to reality
+    frame2= frame[...,::-1] # convert OpenCV's default BGR format to RGB for the model input's conformity to reality
     results = model(frame2)
     
     result_jsons = results.pandas().xyxy[0].to_json(orient="records")
